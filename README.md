@@ -37,29 +37,33 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
-|e-mail|text|null: false, unique: true|
-|password|text|null: false|
+|name|string|null: false, index: true|
+|e_mail|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
-- has_many :group, through: :groups_users
-- has_many :message
+- has_many :groups, through: :groups_users
+- has_many :groups
+- has_many :messages
 
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|text||
-|group_id|integer|foreign_key: true|
-|user_id|integer|foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false|
+|name|string|null: false|
 
 ### Association
-- has_many :user, through: :groups_users
+- has_many :users, through: :groups_users
+- has_many :groups_users
+- has_many :messages
