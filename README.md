@@ -38,12 +38,13 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
-|e-mail|text|null: false, unique: true|
-|password|text|null: false|
+|e-mail|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
-- has_many :group, through: :groups_users
-- has_many :message
+- has_many :groups, through: :groups_users
+- has_many :groups
+- has_many :messages
 
 ## messageテーブル
 |Column|Type|Options|
@@ -55,12 +56,15 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false|
+|group_name|string|null: false|
+|user_id|integer|primary_key|
 
 ### Association
-- has_many :user, through: :groups_users
-
+- has_many :users, through: :groups_users
+- has_many :groups_users
+- has_many :messages
