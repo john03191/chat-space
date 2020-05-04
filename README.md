@@ -63,3 +63,4 @@ Things you may want to cover:
 
 ### Association
 - has_many :user, through: :groups_users
+
