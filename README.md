@@ -37,7 +37,7 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 |e-mail|string|null: false, unique: true|
 |password|string|null: false|
 
@@ -61,8 +61,7 @@ Things you may want to cover:
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
-|user_id|integer|primary_key|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through: :groups_users
