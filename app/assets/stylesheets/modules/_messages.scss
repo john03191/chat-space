@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+$btnColor: #38aef0;
+
+.side {
+  width: 300px;
+  height: 100vh;
+  color: #ffffff;
+  font-weight: bold;
+  &_header {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__name {
+      height: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        font-size: 16px;
+      }
+      &__icon {
+        display: flex;
+        text-align: right;
+        li {
+          margin-left: 5px;
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  } 
+  &_groups {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    &__group {
+      padding: 20px 20px 40px 20px;
+      p {
+        margin-bottom: 5px;
+      }
+      &__name{
+        font-size: 15px;
+      }
+      &__message{
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+
+.main {
+  width: calc(100vw - 300px);
+  &_header {
+    display: flex;
+    background-color: #ffffff;
+    height: 100px;
+    &__left {
+      margin: 0 40px;
+      &__group {
+        padding-top: 35px;
+        font-size: 20px;
+        color: #333333;
+      }
+      &__member {
+        padding-top: 15px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__right__btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px $btnColor;
+      right: 40px;
+      position: absolute;
+      a {
+        color: $btnColor;
+      }
+    }
+  }
+
+  &_chat {
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    &__datas {
+      padding: 35px 0 12px 0;
+      display: flex;
+      &__name {
+        font-size: 16px;
+        color: #333333;
+        padding-right: 5px;
+      }
+      &__today {
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__messages {
+      &__massage {
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+  &_form {
+    background-color: #d2d2d2;
+    height: 90px;
+    display: flex;
+    padding: 20px 40px;
+    &__box {
+      position: relative;
+      display: flex;
+      height: 50px;
+      &__text {
+        width: 100%;
+        padding: 0 10px;
+        width: calc(100vw - 300px - 195px);
+      }
+      &__image {
+        position: absolute;
+        right: 10px;
+        line-height: 50px;
+        a {
+          color: black;
+        }
+        label {
+          cursor: pointer;
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+    &__btn {
+      width: 100px;
+      height: 50px;
+      border: solid 1px $btnColor;
+      background-color: $btnColor;
+      text-align: center;
+      line-height: 50px;
+      margin-left: 15px;
+      a {
+        color: white;
+      }
+    }
+  }
+
+
+}
+

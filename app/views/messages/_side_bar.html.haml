@@ -1,0 +1,19 @@
+.side
+  .side_header
+    .side_header__name
+      %p.side_header__name__label
+        masa
+      %ul.side_header__name__icon
+        %li.side_header__name__edit
+          = link_to "#" do
+            = icon('fas', 'edit')
+        %li.side_header__name__cog
+          = link_to "#" do
+            = icon('fas', 'cog')
+
+  .side_groups
+    .side_groups__group
+      %p.side_groups__group__name
+        family group
+      %p.side_groups__group__message
+        まだメッセージがありません
