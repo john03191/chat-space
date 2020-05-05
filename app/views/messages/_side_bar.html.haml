@@ -2,14 +2,14 @@
   .side_header
     .side_header__name
       %p.side_header__name__label
-        masa
+        = current_user.name
       %ul.side_header__name__icon
         %li.side_header__name__edit
-          = link_to "#" do
-            = icon('fas', 'edit')
+          = link_to do
+            = icon('fas', 'pen-square', class: 'icon')
         %li.side_header__name__cog
-          = link_to "#" do
-            = icon('fas', 'cog')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
 
   .side_groups
     .side_groups__group
