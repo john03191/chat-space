@@ -9,15 +9,15 @@ a {
   text-decoration: none;
 }
 
-$btnColor: #38aef0;
+// $btnColor: #38aef0;
 
 .side {
   width: 300px;
   height: 100vh;
-  color: #ffffff;
+  color: $white;
   font-weight: bold;
   &_header {
-    background-color: #253141;
+    background-color: $side_blue_dark;
     height: 100px;
     display: flex;
     align-items: center;
@@ -36,14 +36,14 @@ $btnColor: #38aef0;
         li {
           margin-left: 5px;
           a {
-            color: white;
+            color: $white;
           }
         }
       }
     }
   } 
   &_groups {
-    background-color: #2f3e51;
+    background-color: $side_blue_light;
     height: calc(100vh - 100px);
     &__group {
       padding: 20px 20px 40px 20px;
@@ -65,19 +65,19 @@ $btnColor: #38aef0;
   width: calc(100vw - 300px);
   &_header {
     display: flex;
-    background-color: #ffffff;
+    background-color: $white;
     height: 100px;
     &__left {
       margin: 0 40px;
       &__group {
         padding-top: 35px;
         font-size: 20px;
-        color: #333333;
+        color: $safe_color;
       }
       &__member {
         padding-top: 15px;
         font-size: 12px;
-        color: #999999;
+        color: $light_gray;
       }
     }
     &__right__btn {
@@ -85,11 +85,11 @@ $btnColor: #38aef0;
       line-height: 40px;
       padding: 0 20px;
       margin-top: 30px;
-      border: solid 1px $btnColor;
+      border: solid 1px $light_blue;
       right: 40px;
       position: absolute;
       a {
-        color: $btnColor;
+        color: $light_blue;
       }
     }
   }
@@ -102,18 +102,18 @@ $btnColor: #38aef0;
       display: flex;
       &__name {
         font-size: 16px;
-        color: #333333;
+        color: $safe_color;
         padding-right: 5px;
       }
       &__today {
         font-size: 12px;
-        color: #999999;
+        color: $light_gray;
       }
     }
     &__messages {
       &__massage {
         font-size: 14px;
-        color: #434A54;
+        color: $black;
       }
     }
   }
@@ -136,7 +136,7 @@ $btnColor: #38aef0;
         right: 10px;
         line-height: 50px;
         a {
-          color: black;
+          color: $black;
         }
         label {
           cursor: pointer;
@@ -149,13 +149,13 @@ $btnColor: #38aef0;
     &__btn {
       width: 100px;
       height: 50px;
-      border: solid 1px $btnColor;
-      background-color: $btnColor;
+      border: solid 1px $light_blue;
+      background-color: $light_blue;
       text-align: center;
       line-height: 50px;
       margin-left: 15px;
       a {
-        color: white;
+        color: $white;
       }
     }
   }
