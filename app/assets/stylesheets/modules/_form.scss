@@ -1,0 +1,47 @@
+
+.form {
+  background-color: $backform;
+  height: 90px;
+  padding: 20px 40px;
+  .new_message {
+    display: flex;
+    
+    .form__message {
+      position: relative;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      input {
+        height: 50px;
+        width: 100%;
+        color: $black;
+        border-style: none;
+        position: absolute;
+      }
+    }
+  
+    .form__mask {
+      display: flex;
+      position: relative;
+      font-size: 1.3rem;
+      &__image {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      #message_image {
+        display: none;
+      }
+    }
+  
+    .form__submit {
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: $light_blue;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}

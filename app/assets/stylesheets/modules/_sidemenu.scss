@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.side {
+  width: 300px;
+  height: 100vh;
+  color: $white;
+  &-header {
+    font-weight: bold;
+    background-color: $side_blue_dark;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__name {
+      height: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        font-size: 16px;
+      }
+      &__icon {
+        display: flex;
+        text-align: right;
+        li {
+          margin-left: 5px;
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  } 
+  &-groups {
+    background-color: $side_blue_light;
+    height: calc(100vh - 100px);
+    &__group {
+      padding: 20px 20px 40px 20px;
+      h3 {
+        @include sidefont($fSize: 15px);
+      }
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+}
